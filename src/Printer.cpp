@@ -20,4 +20,5 @@ Printer::print_screen(char board[8][24])
   }
 }
 
-} // namespace printer
+} // namespace
+espace printer
