@@ -3,16 +3,16 @@
 
 namespace printer{
 Printer::Printer()
-  : length(8)
-  , width(24)
+  : m_length(8)
+  , m_width(24)
 {};
 
 void
-Printer::print_screen(char ** board)
+Printer::print_screen(char board[8][24])
 {
-  for(int i = 0; i < length; i++)
+  for(int i = 0; i < m_length; i++)
   {
-    for(int j = 0; j < width; j++)
+    for(int j = 0; j < m_width; j++)
     {
         std::cout << board[i][j];
     }
@@ -20,4 +20,4 @@ Printer::print_screen(char ** board)
   }
 }
 
-}
+} // namspace printer

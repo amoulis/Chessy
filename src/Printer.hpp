@@ -4,15 +4,15 @@
 namespace printer{
 class
 Printer {
-
-private:
-  int length;
-  int width;
+public:
   Printer();
-  void print_screen(char ** board);
 
+  void print_screen(char board[8][24]);
+private:
+  int m_length;
+  int m_width;
 };
 
-} // namesoace printer
+} // namespace printer
 
 #endif //Printer_HPP

@@ -1,3 +1,5 @@
+#include "Printer.hpp"
+#include <iostream>
 
 char board[8][24] = {
 {
@@ -22,5 +24,7 @@ char board[8][24] = {
 int
 main(void)
 {
+    printer::Printer board_printer;
+    board_printer.print_screen(board);
     return 0;
 }
