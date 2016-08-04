@@ -9,7 +9,7 @@ private:
   int length;
   int width;
   Printer();
-  int print_screen();
+  void print_screen(char ** board);
 
 };
 
