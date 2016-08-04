@@ -2,9 +2,9 @@
 
 CXX = g++
 EXE = prog
-SOURCES = *.cpp
-OBJS = *.o
-DEPS = *.hpp
+SOURCES = main.cpp Printer.cpp
+OBJS = main.o Printer.o
+DEPS = Printer.hpp
 #LIB = .a
 #LIB_OBJS = .o
 
