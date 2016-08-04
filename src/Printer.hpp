@@ -2,6 +2,7 @@
 #define PRINTER_HPP
 
 namespace printer{
+
 class
 Printer {
 public:
