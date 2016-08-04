@@ -20,4 +20,4 @@ Printer::print_screen(char board[8][24])
   }
 }
 
-} // namspace printer
+} // namespace printer
