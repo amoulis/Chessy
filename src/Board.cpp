@@ -12,7 +12,13 @@ Board::Board()
 bool
 Board::is_square_empty(int i, int j)
 {
+  return m_board_state[i][j];
+}
 
+void
+Board::change_square_state(int i, int j, bool n_state)
+{
+  m_board_state[i][j] = n_state;
 }
 
 } // namespace board
