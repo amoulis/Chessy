@@ -9,17 +9,25 @@ class
 Piece
 {
   protected:
-  int x;
-  int y;
-  virtual std::vector <std::vector <int> > get_next_pos(int i, int j);
-  virtual std::vector <int> get_current_pos();
-  virtual void change_current_pos(int i, int j); 
+  virtual std::vector <std::vector <int> > get_next_pos(int i, int j) = 0;
+  virtual std::vector <int> get_current_pos() = 0;
+  virtual void change_current_pos(int i, int j) = 0; 
    
 };
 
 class
 Knight : public Piece {
-
+  
+  private:
+  int m_x;
+  int m_y;
+  
+  public:
+  Knight();
+  Knight(int i, int j);
+  std::vector <std::vector <int> > get_next_pos(int i, int j);
+  std::vector <int> get_current_pos();
+  void change_current_pos(int i, int j);
 };
 
 class
