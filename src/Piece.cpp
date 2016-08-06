@@ -79,7 +79,39 @@ Rook::Rook(int i, int j)
 std::vector <std::vector <int> > 
 Rook::get_next_pos(int i, int j)
 {
+  std::vector < std::vector <int> > total_coord(126);
+  /****************************************
+      board coord (0,0) -----> (63, 0)
+                    |
+                    |
+                (0, 63) ----> (63, 63)                      
+  *****************************************/
+  // [(m_x, m_y); (m_x + 63, m_y + 63)]
+  // [(m_x, m_y); (m_x - 63, m_y + 63)]
+  // [(m_x, m_y); (m_x - 63, m_y - 63)]
+  // [(m_x, m_y); (m_x + 63, m_y - 63)]
 
+  for (int i = 0; i < 63; i++)
+  {
+    std::vector <int> vec(2);
+    vec[0] = m_x + i;
+    vec[1] = m_y + i;
+    total_coord.push_back(vec);
+
+    vec[0] = m_x - i;
+    vec[1] = m_y + i;
+    total_coord.push_back(vec);
+    
+    vec[0] = m_x - i;
+    vec[1] = m_y - i;
+    total_coord.push_back(vec);
+    
+    vec[0] = m_x + i;
+    vec[1] = m_y - i;
+    total_coord.push_back(vec);
+  }
+
+  return total_coord;
 }
 
 } // namespace piece
