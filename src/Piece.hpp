@@ -8,13 +8,15 @@ namespace piece {
 class
 Piece
 {
-  protected:
-  int m_x;
-  int m_y;
+  public:
+  Piece();
+  Piece (int i, int j);  
   virtual std::vector <std::vector <int> > get_next_pos(int i, int j) = 0;
   std::vector <int> get_current_pos();
-  void change_current_pos(int i, int j); 
-   
+  void change_current_pos(int i, int j);
+  private:
+  int m_x;
+  int m_y;
 };
 
 class
@@ -28,8 +30,6 @@ Knight : public Piece {
   Knight();
   Knight(int i, int j);
   std::vector <std::vector <int> > get_next_pos(int i, int j);
-  std::vector <int> get_current_pos();
-  void change_current_pos(int i, int j);
 };
 
 class
@@ -43,8 +43,6 @@ Rook : public Piece {
   Rook();
   Rook(int i, int j);
   std::vector <std::vector <int> > get_next_pos(int i, int j);
-  std::vector <int> get_current_pos();
-  void change_current_pos(int i, int j);
 };
 
 class
