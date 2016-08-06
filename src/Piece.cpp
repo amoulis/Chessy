@@ -1,6 +1,22 @@
 #include "Piece.hpp"
 
 namespace piece {
+
+std::vector <int> 
+Piece::get_current_pos()
+{
+  std::vector <int> curr_pos(2);
+  curr_pos[0] = m_x;
+  curr_pos[1] = m_y;
+  return curr_pos;
+}  
+void 
+Piece::change_current_pos(int i, int j)
+{
+  m_x = i;
+  m_y = j;
+}
+
 /****************************************************************************
                                 KNIGHT
 ****************************************************************************/
@@ -41,19 +57,10 @@ Knight::get_next_pos(int i, int j)
   return total_coord;
 }
 
-std::vector <int> 
-Knight::get_current_pos()
-{
-  std::vector <int> curr_pos(2);
-  curr_pos[0] = m_x;
-  curr_pos[1] = m_y;
-  return curr_pos;
-}  
-void 
-Knight::change_current_pos(int i, int j)
-{
-  m_x = i;
-  m_y = j;
-}
+/****************************************************************************
+                                Rook
+****************************************************************************/
+
+
 
 } // namespace piece
