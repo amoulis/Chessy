@@ -76,6 +76,15 @@ Pawn : public Piece {
 
 class
 King : public Piece {
+  
+  private:
+  int m_x;
+  int m_y;
+  
+  public:
+  King();
+  King(int i, int j);
+  std::vector <std::vector <int> > get_next_pos(int i, int j);
 
 };
 

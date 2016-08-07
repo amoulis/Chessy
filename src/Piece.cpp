@@ -208,5 +208,59 @@ Pawn::get_next_pos(int i, int j)
   return total_coord; 
 }
 
+/****************************************************************************
+                                    KING
+****************************************************************************/
+King::King()
+  : Piece()
+{}
+
+King::King(int i, int j)
+  : Piece(i, j)
+{}
+
+
+std::vector <std::vector <int> > 
+King::get_next_pos(int i, int j)
+{
+
+  std::vector <std::vector <int> > total_coord;
+  std::vector <int> vec(2);
+  
+  vec[0] = m_x + 1;
+  vec[1] = m_y;
+  total_coord.push_back(vec);  
+
+  vec[0] = m_x + 1;
+  vec[1] = m_y +1;
+  total_coord.push_back(vec);  
+  
+  vec[0] = m_x - 1;
+  vec[1] = m_y + 1;
+  total_coord.push_back(vec);  
+
+  vec[0] = m_x - 1;
+  vec[1] = m_y - 1;
+  total_coord.push_back(vec);  
+  
+  vec[0] = m_x + 1;
+  vec[1] = m_y - 1;
+  total_coord.push_back(vec);  
+
+  vec[0] = m_x;
+  vec[1] = m_y + 1;
+  total_coord.push_back(vec);  
+
+  vec[0] = m_x;
+  vec[1] = m_y - 1;
+  total_coord.push_back(vec);  
+
+  vec[0] = m_x - 1;
+  vec[1] = m_y;
+  total_coord.push_back(vec);  
+
+  return total_coord;
+}
+
 
 } // namespace piece
