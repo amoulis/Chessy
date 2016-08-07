@@ -155,4 +155,58 @@ Bishop::get_next_pos(int i, int j)
   return total_coord;
 }
 
+/***************************************************************************
+                                    PAWN
+****************************************************************************/
+Pawn::Pawn()
+  : Piece()
+  , m_first_move(false)
+{}
+
+Pawn::Pawn(int i, int j)
+  : Piece(i, j)
+  , m_first_move(false)
+{}
+
+bool
+Pawn::set_first_move(const bool val)
+{
+  m_first_move = val;
+}
+
+std::vector <std::vector <int> > 
+Pawn::get_next_pos(int i, int j)
+{
+
+  std::vector <std::vector <int> > total_coord;
+  // now here the tricky thing, a Pawn can move for two square if 
+  // it's its first move.
+  // Also, he can move in diagonal to capture an ennemy piece
+  
+  std::vector <int> vec(2);
+  if(true == m_first_move)
+  {
+    vec[0] = m_x;
+    vec[1] = m_y + 2;
+  }  
+  total_coord.push_back(vec);
+  
+  vec[0] = m_x;
+  vec[1] = m_y + 1;  
+  total_coord.push_back(vec);
+
+  // now here is the 'diagonal move' it would be the responsability of
+  // another class to see if its a legit move
+  vec[0] = m_x + 1;
+  vec[1] = m_y + 1;
+  total_coord.push_back(vec);
+  
+  vec[0] = m_x + 1;
+  vec[1] = m_y - 1;
+  total_coord.push_back(vec);
+  
+  return total_coord; 
+}
+
+
 } // namespace piece

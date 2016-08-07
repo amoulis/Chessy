@@ -47,11 +47,30 @@ Rook : public Piece {
 
 class
 Bishop : public Piece {
+  
+  private:
+  int m_x;
+  int m_y;
+  
+  public:
+  Bishop();
+  Bishop(int i, int j);
+  std::vector <std::vector <int> > get_next_pos(int i, int j);
 
 };
 
 class
 Pawn : public Piece {
+  private:
+  int m_x;
+  int m_y;
+  bool m_first_move;
+  
+  public:
+  Pawn();
+  Pawn(int i, int j);
+  bool set_first_move(const bool val);
+  std::vector <std::vector <int> > get_next_pos(int i, int j);
 
 };
 
