@@ -40,7 +40,7 @@ Knight::Knight(int i, int j)
 {}
 
 std::vector <std::vector <int> > 
-Knight::get_next_pos(int i, int j)
+Knight::get_next_pos()
 {
   std::vector < int > x_y_coord(2);
   std::vector < std::vector <int> > total_coord(4);
@@ -77,7 +77,7 @@ Rook::Rook(int i, int j)
 {}
 
 std::vector <std::vector <int> > 
-Rook::get_next_pos(int i, int j)
+Rook::get_next_pos()
 {
   std::vector < std::vector <int> > total_coord(126);
   /****************************************
@@ -128,7 +128,7 @@ Bishop::Bishop(int i, int j)
 
 
 std::vector <std::vector <int> > 
-Bishop::get_next_pos(int i, int j)
+Bishop::get_next_pos()
 {
 
   std::vector <std::vector <int> > total_coord;
@@ -175,7 +175,7 @@ Pawn::set_first_move(const bool val)
 }
 
 std::vector <std::vector <int> > 
-Pawn::get_next_pos(int i, int j)
+Pawn::get_next_pos()
 {
 
   std::vector <std::vector <int> > total_coord;
@@ -221,7 +221,7 @@ King::King(int i, int j)
 
 
 std::vector <std::vector <int> > 
-King::get_next_pos(int i, int j)
+King::get_next_pos()
 {
 
   std::vector <std::vector <int> > total_coord;

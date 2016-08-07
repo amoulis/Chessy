@@ -11,7 +11,7 @@ Piece
   public:
   Piece();
   Piece (int i, int j);  
-  virtual std::vector <std::vector <int> > get_next_pos(int i, int j) = 0;
+  virtual std::vector <std::vector <int> > get_next_pos() = 0;
   std::vector <int> get_current_pos();
   void change_current_pos(int i, int j);
   private:
@@ -29,7 +29,7 @@ Knight : public Piece {
   public:
   Knight();
   Knight(int i, int j);
-  std::vector <std::vector <int> > get_next_pos(int i, int j);
+  std::vector <std::vector <int> > get_next_pos();
 };
 
 class
@@ -42,7 +42,7 @@ Rook : public Piece {
   public:
   Rook();
   Rook(int i, int j);
-  std::vector <std::vector <int> > get_next_pos(int i, int j);
+  std::vector <std::vector <int> > get_next_pos();
 };
 
 class
@@ -55,7 +55,7 @@ Bishop : public Piece {
   public:
   Bishop();
   Bishop(int i, int j);
-  std::vector <std::vector <int> > get_next_pos(int i, int j);
+  std::vector <std::vector <int> > get_next_pos();
 
 };
 
@@ -70,7 +70,7 @@ Pawn : public Piece {
   Pawn();
   Pawn(int i, int j);
   bool set_first_move(const bool val);
-  std::vector <std::vector <int> > get_next_pos(int i, int j);
+  std::vector <std::vector <int> > get_next_pos();
 
 };
 
@@ -84,7 +84,7 @@ King : public Piece {
   public:
   King();
   King(int i, int j);
-  std::vector <std::vector <int> > get_next_pos(int i, int j);
+  std::vector <std::vector <int> > get_next_pos();
 
 };
 
