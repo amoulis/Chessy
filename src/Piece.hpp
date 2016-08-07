@@ -90,6 +90,15 @@ King : public Piece {
 
 class
 Queen : public Piece {
+  
+  private:
+  int m_x;
+  int m_y;
+  
+  public:
+  Queen();
+  Queen(int i, int j);
+  std::vector <std::vector <int> > get_next_pos();
 
 };
 
