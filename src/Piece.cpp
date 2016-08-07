@@ -95,22 +95,43 @@ Rook::get_next_pos(int i, int j)
   {
     std::vector <int> vec(2);
     vec[0] = m_x + i;
-    vec[1] = m_y + i;
+    //vec[1] = m_y + i;
     total_coord.push_back(vec);
 
     vec[0] = m_x - i;
+    //vec[1] = m_y + i;
+    total_coord.push_back(vec);
+    
+    //vec[0] = m_x - i;
+    vec[1] = m_y - i;
+    total_coord.push_back(vec);
+    
+    //vec[0] = m_x + i;
     vec[1] = m_y + i;
-    total_coord.push_back(vec);
-    
-    vec[0] = m_x - i;
-    vec[1] = m_y - i;
-    total_coord.push_back(vec);
-    
-    vec[0] = m_x + i;
-    vec[1] = m_y - i;
     total_coord.push_back(vec);
   }
 
+  return total_coord;
+}
+
+/****************************************************************************
+                              BISHOP
+****************************************************************************/
+
+Bishop::Bishop()
+  : Piece()
+{}
+
+Bishop::Bishop(int i, int j)
+  : Piece (i, j)
+{}
+
+
+std::vector <std::vector <int> > 
+Bishop::get_next_pos(int i, int j)
+{
+
+  std::vector <std::vector <int> > total_coord;
   return total_coord;
 }
 
