@@ -24,7 +24,20 @@ char board[8][24] = {
 int
 main(void)
 {
-    printer::Printer board_printer;
-    board_printer.print_screen(board);
-    return 0;
+  // Board printer
+  printer::Printer board_printer;
+  board_printer.print_screen(board);
+    
+  // board sate for PBlack
+  // board state for PWhite 
+  
+  // Daemon loop
+  while(1)
+  {
+    // Black turn
+    
+    // White turn
+  }
+  
+  return 0;
 }
