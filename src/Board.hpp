@@ -1,3 +1,9 @@
+/******************************************************************************
+Board.hpp
+State of the board empty/used square on the board by player
+It means it has to have one instance for white and one for black
+*******************************************************************************/
+
 #ifndef BOARD_HPP
 #define BOARD_HPP
 

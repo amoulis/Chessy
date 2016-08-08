@@ -1,3 +1,7 @@
+/***************************************************************************
+Printer.hpp
+Prints data on screen (board display with the pieces)
+***************************************************************************/
 #ifndef PRINTER_HPP
 #define PRINTER_HPP
 

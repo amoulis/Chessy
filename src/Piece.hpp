@@ -1,3 +1,16 @@
+/*******************************************************************************
+Piece.hpp
+Classes used for piece movements and any move 'possible'. It does not have any
+data about the board, that means another class would have to check if the moves are 'legit' (i.e: not out of the board...).
+Piece is the mother class, other inherits directly from it.
+
+                                  Piece
+                                    |
+                  _____________________________________
+                  |      |      |     |     |         |
+                Knight King   Queen Pawn  Rook      Bishop
+
+*******************************************************************************/
 #ifndef PIECE_HPP
 #define PIECE_HPP
 
